@@ -1,0 +1,20 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "Eat-Da-Burger is a fun app that lets a user input the names of burgers they want to eat. This app will use MySql, Node, Express, and Handlebars",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pramos13/Eat-Da-Burger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pramos13/Eat-Da-Burger/issues"
+  },
+  "homepage": "https://github.com/pramos13/Eat-Da-Burger#readme",
+  "dependencies": {}
+}
