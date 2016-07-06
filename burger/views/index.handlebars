@@ -1,0 +1,70 @@
+<div class="container">
+  <div id="title">
+    <p>Eat-Da-Burger</p>
+  </div>
+
+  <div class="col-xs-6 col-sm-4">
+    <div class="panel panel-default">
+      <div id="heading" class="panel panel-heading">
+        <h2>Burgers to devour</h2>
+      </div>
+      <div class="panel panel=body">
+        <ul>
+          {{#each burgers}}
+            {{#unless this.devoured}}
+              <li>
+                {{this.burger_name}}
+                <form action="index/update/{{this.id}}?_method=PUT" method="POST">
+                  <input type="hidden" name="devoured" value="1">
+                  <button type="submit">Devour It</button>
+                </form>
+              </li>
+            {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
+  </div>
+</div>
+
+  <div class="col-xs-6 col-sm-4">
+    <div class="panel panel-default">
+      <div id="heading" class="panel panel-heading">
+        <h2>Add a Burger</h2>
+      </div>
+      <div id="addBurger" class="panel panel-body">
+        <form class="create-update-form" action="index/create" method="POST">
+          <div class="form-group">
+            <input type="text" placeholder="Burger Name" id="burger" name="burger_name">
+          </div>
+          <div class="form-group">
+            <label for="devoured"></label>
+            <input type="hidden" name="devoured" value="0" checked>
+          </div>
+          <button type="submit">Add Burger</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-6 col-sm-4">
+    <div class="panel panel-default">
+      <div id="heading" class="panel panel-heading">
+        <h2>Burgers devoured</h2>
+      </div>
+      <div class="panel panel-body">
+        <ul>
+          {{#each burgers}}
+            {{#if this.devoured}}
+              <li>
+                {{this.burger_name}}
+                <form action="index/update/{{this.id}}?_method=PUT" method="POST">
+                  <input type="hidden" name="devoured" value="0">
+                  <button type="submit">Spit It Out</button>
+                </form>
+              </li>
+            {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>

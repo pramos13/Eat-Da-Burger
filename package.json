@@ -16,5 +16,10 @@
     "url": "https://github.com/pramos13/Eat-Da-Burger/issues"
   },
   "homepage": "https://github.com/pramos13/Eat-Da-Burger#readme",
-  "dependencies": {}
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.6",
+    "mysql": "^2.11.1"
+  }
 }
